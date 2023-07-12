@@ -1,0 +1,16 @@
+# conda env create -f environment.yml
+name: lcls-cu-injector
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pydantic==1.10.9
+  - botorch>=0.8.2
+  - lume-model>=1.6.0
+  - ipywidgets
+  - tqdm
+  - matplotlib
+  - pip
+  - pip:
+    - notebook
