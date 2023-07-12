@@ -1,0 +1,87 @@
+# NOTE here we maintain the correct order for the model's input
+model:
+  kwargs:
+    model_file: model.pt
+  model_class: lume_model.torch.PyTorchModel
+  model_info: info/model_info.json
+  output_format:
+    type: tensor
+  requirements:
+    torch: 1.12.1
+
+input_variables:
+  distgen:r_dist:sigma_xy:value:
+    default: 0.423867825
+    range: [0.21021247820852546, 0.4999996083265339]
+    type: scalar
+  distgen:t_dist:length:value:
+    default: 3.06083484
+    range: [3.000000758511308, 11.998569812014836]
+    type: scalar
+  distgen:total_charge:value:
+    default: 250.0
+    range: [250.0, 250.0]
+    type: scalar
+  SOL1:solenoid_field_scale:
+    default: 0.245806452
+    range: [0.19409053333889578, 0.2563030896232562]
+    type: scalar
+  CQ01:b1_gradient:
+    default: 0.000713917676
+    range: [-0.009999618141995313, 0.0099925212795954]
+    type: scalar
+  SQ01:b1_gradient:
+    default: 0.000327285211
+    range: [-0.009999490058927914, 0.009999443099573097]
+    type: scalar
+  L0A_scale:voltage:
+    default: 58000000.0
+    range: [58000000.0, 58000000.0]
+    type: scalar
+  L0A_phase:dtheta0_deg:
+    default: -9.53597349
+    range: [-24.998714513984325, 9.991752397382681]
+    type: scalar
+  L0B_scale:voltage:
+    default: 70000000.0
+    range: [70000000.0, 70000000.0]
+    type: scalar
+  L0B_phase:dtheta0_deg:
+    default: 9.85566222
+    range: [-24.99972566363747, 9.998904767155892]
+    type: scalar
+  QA01:b1_gradient:
+    default: 1.85240001
+    range: [1.000039854940649, 3.998197816908352]
+    type: scalar
+  QA02:b1_gradient:
+    default: -1.85240001
+    range: [-3.990444304119449, -1.0105116218007806]
+    type: scalar
+  QE01:b1_gradient:
+    default: 0.187200002
+    range: [1.0007061999094193, 6.9997773994714345]
+    type: scalar
+  QE02:b1_gradient:
+    default: 0.1661
+    range: [-6.999887318319171, 0.9983521010385275]
+    type: scalar
+  QE03:b1_gradient:
+    default: -2.6409
+    range: [-6.998418428856965, 0.9993010487139868]
+    type: scalar
+  QE04:b1_gradient:
+    default: 2.97999999
+    range: [1.000026533968218, 6.998086093251312]
+    type: scalar
+output_variables:
+  sigma_x:
+    type: scalar
+  sigma_y:
+    type: scalar
+  sigma_z:
+    type: scalar
+  norm_emit_x:
+    type: scalar
+  norm_emit_y:
+    type: scalar
