@@ -11,6 +11,3 @@ dependencies:
   - ipywidgets
   - tqdm
   - matplotlib
-  - pip
-  - pip:
-    - notebook
