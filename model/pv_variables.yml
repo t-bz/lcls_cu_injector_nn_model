@@ -3,11 +3,11 @@ input_variables:
     default: 423.867825
     range: [210.21247820852546, 499.9996083265339]
     type: scalar
-  Pulse_length:
+  Pulse_length: # note this doesn't exist as a PV so we need to process any data gathered to use the reference value
     default: 1.8550514181818183
     range: [1.8181822778856414, 7.2718604921302035]
     type: scalar
-  FBCK:BCI0:1:CHRG_S:
+  FBCK:BCI0:1:CHRG_S: # this was kept as a constant during the training process so we need to overwrite any values in the data with this constant value
     default: 0.25
     range: [0.25, 0.25]
     type: scalar
@@ -31,7 +31,7 @@ input_variables:
     default: -9.53597349
     range: [-24.998714513984325, 9.991752397382681]
     type: scalar
-  ACCL:IN20:400:L0B_ADES:
+  ACCL:IN20:400:L0B_ADES: # this was kept as a constant during the training process so we need to overwrite any values in the data with this constant value
     default: 70.0
     range: [70.0, 70.0]
     type: scalar
