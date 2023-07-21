@@ -1,10 +1,14 @@
-# lcls_cu_injector_nn_model
+# LCLS Cu Injector NN Model
 
-Stores the files corresponding to the LCLS Cu injector NN surrogate model and example notebooks illustrating how to load and use the model.
+Contains the files corresponding to the LCLS Cu injector NN surrogate model and example notebooks illustrating how to load and use the model.
 
 ## Model Description
 
-The model was trained by Auralee to predict beam properties at OTR2 using injector PVs for LCLS. See the examples below for more information.
+The model was trained by Auralee to predict beam properties at OTR2 using injector PVs for LCLS. As the model was trained with normalized data, input and output transformations have to be applied to use it on simulation data. Another layer of transformations is required for using it with EPICS data. See provided examples for more information.
+
+<br/>
+<img src="transformers.png" alt="drawing" width="1000"/>
+<br/><br/>
 
 ## Environment
 
@@ -14,12 +18,16 @@ conda env create -f environment.yml
 
 ## Examples
 
-* Load information: [load_info.ipynb](load_info.ipynb)
-* Load as PyTorch module: [load_torch_model.ipynb](load_torch_model.ipynb)
-* Load as LUME module: [load_lume_model.ipynb](load_lume_model.ipynb)
-* Load as LUME module with EPICS PVs: [load_lume_model_epics.ipynb](load_lume_model_epics.ipynb)
+* [Load and print model information](info.ipynb)
+* [Load as torch model](torch_model.ipynb)
+* [Load as LUME-model](lume_model.ipynb)
+* [Load as LUME-model for use with EPICS data](lume_model_epics.ipynb)
 
-## Notes about working with EPICS PV values
+## Default Input Variables
+
+The default value for `QE01:b1_gradient` in the [simulation variable specification](model/sim_variables.yml) has been noticed to lie outside the given value range. We aim to choose a new reference point based on an optimization of the function defined by the surrogate model.
+
+## Notes about Working with EPICS PV Values
 
 ### OTR2 / OTR3
 
