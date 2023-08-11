@@ -25,7 +25,7 @@ conda env create -f environment.yml
 
 ## Default Input Variables
 
-The default value for `QE01:b1_gradient` in the [simulation variable specification](model/sim_variables.yml) has been noticed to lie outside the given value range. We aim to choose a new reference point based on an optimization of the function defined by the surrogate model.
+The default value for `QE01:b1_gradient` in the [simulation variable specification](model/sim_variables.yml) has been noticed to lie outside the given value range (likewise for `QUAD:IN20:425:BACT` in the [PV variable specification](model/sim_variables.yml)).  Thus, a new value was determined by minimizing the model prediction of the transverse beam size within the valid range (documented in [this notebook](correct_inconsistent_default_value.ipynb)).
 
 ## Notes about Working with EPICS PV Values
 
