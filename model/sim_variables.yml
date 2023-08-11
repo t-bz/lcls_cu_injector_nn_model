@@ -59,7 +59,7 @@ input_variables:
     range: [-3.990444304119449, -1.0105116218007806]
     type: scalar
   QE01:b1_gradient:
-    default: 0.187200002
+    default: 1.0007061999094193
     range: [1.0007061999094193, 6.9997773994714345]
     type: scalar
   QE02:b1_gradient:

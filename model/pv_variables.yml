@@ -48,7 +48,7 @@ input_variables:
     range: [1.0913525514575348, 4.30967984810423]
     type: scalar
   QUAD:IN20:425:BACT:
-    default: -0.20217600214382594
+    default: -1.0807627139393465
     range: [-7.559759590824369, -1.080762695815712]
     type: scalar
   QUAD:IN20:441:BACT:
