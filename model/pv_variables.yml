@@ -1,76 +1,87 @@
 input_variables:
   CAMR:IN20:186:R_DIST: # note this is a PV made from CAMR:IN20:186:XRMS and CAMR:IN20:186:YRMS in data-processing stage
+    variable_type: scalar
     default: 423.867825
-    range: [210.21247820852546, 499.9996083265339]
-    type: scalar
+    is_constant: false
+    value_range: [210.21247820852546, 499.9996083265339]
   Pulse_length: # note this doesn't exist as a PV so we need to process any data gathered to use the reference value
+    variable_type: scalar
     default: 1.8550514181818183
-    range: [1.8181822778856414, 7.2718604921302035]
-    type: scalar
-  FBCK:BCI0:1:CHRG_S: # this was kept as a constant during the training process so we need to overwrite any values in the data with this constant value
+    is_constant: false
+    value_range: [1.8181822778856414, 7.2718604921302035]
+  FBCK:BCI0:1:CHRG_S: # this was kept as a constant during the training process, so we need to overwrite any values in the data with this constant value
+    variable_type: scalar
     default: 0.25
-    range: [0.25, 0.25]
-    type: scalar
+    is_constant: true
+    value_range: [0.25, 0.25]
   SOLN:IN20:121:BACT:
+    variable_type: scalar
     default: 0.4779693455075814
-    range: [0.3774080152672698, 0.4983800018349345]
-    type: scalar
+    is_constant: false
+    value_range: [0.3774080152672698, 0.4983800018349345]
   QUAD:IN20:121:BACT:
+    variable_type: scalar
     default: -0.001499227120199691
-    range: [-0.02098429469554406, 0.020999198106589838]
-    type: scalar
+    is_constant: false
+    value_range: [-0.02098429469554406, 0.020999198106589838]
   QUAD:IN20:122:BACT:
+    variable_type: scalar
     default: -0.0006872989433749197
-    range: [-0.020998830517503037, 0.020998929132148195]
-    type: scalar
+    is_constant: false
+    value_range: [-0.020998830517503037, 0.020998929132148195]
   ACCL:IN20:300:L0A_ADES:
+    variable_type: scalar
     default: 58.0
-    range: [58.0, 58.0]
-    type: scalar
+    is_constant: true
+    value_range: [58.0, 58.0]
   ACCL:IN20:300:L0A_PDES:
+    variable_type: scalar
     default: -9.53597349
-    range: [-24.998714513984325, 9.991752397382681]
-    type: scalar
+    is_constant: false
+    value_range: [-24.998714513984325, 9.991752397382681]
   ACCL:IN20:400:L0B_ADES: # this was kept as a constant during the training process so we need to overwrite any values in the data with this constant value
+    variable_type: scalar
     default: 70.0
-    range: [70.0, 70.0]
-    type: scalar
+    is_constant: true
+    value_range: [70.0, 70.0]
   ACCL:IN20:400:L0B_PDES:
+    variable_type: scalar
     default: 9.85566222
-    range: [-24.99972566363747, 9.998904767155892]
-    type: scalar
+    is_constant: false
+    value_range: [-24.99972566363747, 9.998904767155892]
   QUAD:IN20:361:BACT:
+    variable_type: scalar
     default: -2.0005920106399526
-    range: [-4.318053641915576, -1.0800430432494976]
-    type: scalar
+    is_constant: false
+    value_range: [-4.318053641915576, -1.0800430432494976]
   QUAD:IN20:371:BACT:
+    variable_type: scalar
     default: 2.0005920106399526
-    range: [1.0913525514575348, 4.30967984810423]
-    type: scalar
+    is_constant: false
+    value_range: [1.0913525514575348, 4.30967984810423]
   QUAD:IN20:425:BACT:
+    variable_type: scalar
     default: -1.0807627139393465
-    range: [-7.559759590824369, -1.080762695815712]
-    type: scalar
+    is_constant: false
+    value_range: [-7.559759590824369, -1.080762695815712]
   QUAD:IN20:441:BACT:
+    variable_type: scalar
     default: -0.17938799998564897
-    range: [-1.0782202690353522, 7.559878303179915]
-    type: scalar
+    is_constant: false
+    value_range: [-1.0782202690353522, 7.559878303179915]
   QUAD:IN20:511:BACT:
+    variable_type: scalar
     default: 2.852171999771826
-    range: [-1.0792451325247663, 7.5582919025608595]
-    type: scalar
+    is_constant: false
+    value_range: [-1.0792451325247663, 7.5582919025608595]
   QUAD:IN20:525:BACT:
+    variable_type: scalar
     default: -3.218399988942528
-    range: [-7.557932980106783, -1.0800286565992732]
-    type: scalar
+    is_constant: false
+    value_range: [-7.557932980106783, -1.0800286565992732]
 output_variables:
-  OTRS:IN20:571:XRMS:
-    type: scalar
-  OTRS:IN20:571:YRMS:
-    type: scalar
-  sigma_z:
-    type: scalar
-  norm_emit_x:
-    type: scalar
-  norm_emit_y:
-    type: scalar
+  OTRS:IN20:571:XRMS: {variable_type: scalar}
+  OTRS:IN20:571:YRMS: {variable_type: scalar}
+  sigma_z: {variable_type: scalar}
+  norm_emit_x: {variable_type: scalar}
+  norm_emit_y: {variable_type: scalar}

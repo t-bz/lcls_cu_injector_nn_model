@@ -1,87 +1,87 @@
-# NOTE here we maintain the correct order for the model's input
-model:
-  kwargs:
-    model_file: model.pt
-  model_class: lume_model.torch.PyTorchModel
-  model_info: ../info/model.json
-  output_format:
-    type: tensor
-  requirements:
-    torch: 1.12.1
-
 input_variables:
   distgen:r_dist:sigma_xy:value:
+    variable_type: scalar
     default: 0.423867825
-    range: [0.21021247820852546, 0.4999996083265339]
-    type: scalar
+    is_constant: false
+    value_range: [0.21021247820852546, 0.4999996083265339]
   distgen:t_dist:length:value:
+    variable_type: scalar
     default: 3.06083484
-    range: [3.000000758511308, 11.998569812014836]
-    type: scalar
+    is_constant: false
+    value_range: [3.000000758511308, 11.998569812014836]
   distgen:total_charge:value:
+    variable_type: scalar
     default: 250.0
-    range: [250.0, 250.0]
-    type: scalar
+    is_constant: true
+    value_range: [250.0, 250.0]
   SOL1:solenoid_field_scale:
+    variable_type: scalar
     default: 0.245806452
-    range: [0.19409053333889578, 0.2563030896232562]
-    type: scalar
+    is_constant: false
+    value_range: [0.19409053333889578, 0.2563030896232562]
   CQ01:b1_gradient:
+    variable_type: scalar
     default: 0.000713917676
-    range: [-0.009999618141995313, 0.0099925212795954]
-    type: scalar
+    is_constant: false
+    value_range: [-0.009999618141995313, 0.0099925212795954]
   SQ01:b1_gradient:
+    variable_type: scalar
     default: 0.000327285211
-    range: [-0.009999490058927914, 0.009999443099573097]
-    type: scalar
+    is_constant: false
+    value_range: [-0.009999490058927914, 0.009999443099573097]
   L0A_scale:voltage:
+    variable_type: scalar
     default: 58000000.0
-    range: [58000000.0, 58000000.0]
-    type: scalar
+    is_constant: true
+    value_range: [58000000.0, 58000000.0]
   L0A_phase:dtheta0_deg:
+    variable_type: scalar
     default: -9.53597349
-    range: [-24.998714513984325, 9.991752397382681]
-    type: scalar
+    is_constant: false
+    value_range: [-24.998714513984325, 9.991752397382681]
   L0B_scale:voltage:
+    variable_type: scalar
     default: 70000000.0
-    range: [70000000.0, 70000000.0]
-    type: scalar
+    is_constant: true
+    value_range: [70000000.0, 70000000.0]
   L0B_phase:dtheta0_deg:
+    variable_type: scalar
     default: 9.85566222
-    range: [-24.99972566363747, 9.998904767155892]
-    type: scalar
+    is_constant: false
+    value_range: [-24.99972566363747, 9.998904767155892]
   QA01:b1_gradient:
+    variable_type: scalar
     default: 1.85240001
-    range: [1.000039854940649, 3.998197816908352]
-    type: scalar
+    is_constant: false
+    value_range: [1.000039854940649, 3.998197816908352]
   QA02:b1_gradient:
+    variable_type: scalar
     default: -1.85240001
-    range: [-3.990444304119449, -1.0105116218007806]
-    type: scalar
+    is_constant: false
+    value_range: [-3.990444304119449, -1.0105116218007806]
   QE01:b1_gradient:
+    variable_type: scalar
     default: 1.0007061999094193
-    range: [1.0007061999094193, 6.9997773994714345]
-    type: scalar
+    is_constant: false
+    value_range: [1.0007061999094193, 6.9997773994714345]
   QE02:b1_gradient:
+    variable_type: scalar
     default: 0.1661
-    range: [-6.999887318319171, 0.9983521010385275]
-    type: scalar
+    is_constant: false
+    value_range: [-6.999887318319171, 0.9983521010385275]
   QE03:b1_gradient:
+    variable_type: scalar
     default: -2.6409
-    range: [-6.998418428856965, 0.9993010487139868]
-    type: scalar
+    is_constant: false
+    value_range: [-6.998418428856965, 0.9993010487139868]
   QE04:b1_gradient:
+    variable_type: scalar
     default: 2.97999999
-    range: [1.000026533968218, 6.998086093251312]
-    type: scalar
+    is_constant: false
+    value_range: [1.000026533968218, 6.998086093251312]
 output_variables:
-  sigma_x:
-    type: scalar
-  sigma_y:
-    type: scalar
-  sigma_z:
-    type: scalar
-  norm_emit_x:
-    type: scalar
-  norm_emit_y:
-    type: scalar
+  sigma_x: {variable_type: scalar}
+  sigma_y: {variable_type: scalar}
+  sigma_z: {variable_type: scalar}
+  norm_emit_x: {variable_type: scalar}
+  norm_emit_y: {variable_type: scalar}
