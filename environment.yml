@@ -7,7 +7,10 @@ dependencies:
   - python=3.9
   - pydantic>2.3
   - botorch>=0.8.2
-#  - lume-model>1.6.0 (not yet released version from pydantic_v2 branch)
+  - ipykernel
   - ipywidgets
   - tqdm
   - matplotlib
+  - pip
+  - pip:
+      - git+https://github.com/slaclab/lume-model.git

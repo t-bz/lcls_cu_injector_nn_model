@@ -1,6 +1,6 @@
 # LCLS Cu Injector NN Model
 
-Contains the files corresponding to the LCLS Cu injector NN surrogate model and example notebooks illustrating how to load and use the model.
+Contains the files corresponding to the LCLS Cu injector NN surrogate model and example notebooks illustrating how to load and use the model. Although not required, using [LUME-model](https://github.com/slaclab/lume-model) is recommended.
 
 ## Model Description
 
